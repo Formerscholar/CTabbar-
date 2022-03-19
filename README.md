@@ -1,3 +1,5 @@
+# 效果
+ ![效果图](/动画.gif "Chad")
 # 示例
 
 ```javascript
