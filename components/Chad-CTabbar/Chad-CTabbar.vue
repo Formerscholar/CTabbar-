@@ -53,7 +53,7 @@
 			MainColor: {
 				type: String,
 				required: false,
-				default: "#288afc"
+				default: "#d4237a"
 			},
 			//副色调 : 选中图片颜色 （建议白灰）
 			ViceColor: {
@@ -80,14 +80,11 @@
 		watch: {
 			$route: {
 				handler(to, from) {
-					if (to.meta.index == 0) {
-						let that = this
-						that.tabbarList.map((item, idx) => {
-							if (item.router == to.path) {
-								that.currentItem = idx
-							}
-						})
-					}
+					this.tabbarList.map((item, idx) => {
+						if (item.router == to.path) {
+							this.currentItem = idx
+						}
+					})
 				},
 				immediate: true,
 				deep: true,
