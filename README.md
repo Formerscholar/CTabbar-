@@ -1,5 +1,5 @@
 # 效果
- ![效果图](/动画.gif "Chad")
+ ![效果图](https://chad-blog.oss-cn-shanghai.aliyuncs.com/%E5%8A%A8%E7%94%BB.gif "Chad")
 # 示例
 
 ```javascript
