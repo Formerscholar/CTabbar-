@@ -1,7 +1,7 @@
 <template>
 	<div id="c-tabbar">
 		<div v-for="(item,idx) in tabbarList" :key="idx" :class="idx === currentItem ? 'list current' :'list'"
-			@click="changeCurrent(item,idx)" >
+			@click="changeCurrent(item,idx)">
 			<div class="item">
 				<image class="iconfont" :src="currentItem === idx ? item.ImgUrl: item.AcImgUrl" mode="img"></image>
 				<p :style="{'color':currentItem === idx ?MainColor:ViceColor}">{{item.text}}</p>
@@ -16,16 +16,49 @@
 		props: {
 			tabbarList: {
 				type: Array,
-				default: []
+				required: false,
+				default: [{
+						ImgUrl: '/static/c-tabbar/img/home.png',
+						AcImgUrl: "/static/c-tabbar/img/home-c.png",
+						text: '首页',
+						router: '/agency',
+					},
+					{
+						ImgUrl: '/static/c-tabbar/img/cart.png',
+						AcImgUrl: "/static/c-tabbar/img/cart-c.png",
+						text: '购物车',
+						router: '/census',
+					},
+					{
+						ImgUrl: '/static/c-tabbar/img/hot.png',
+						AcImgUrl: "/static/c-tabbar/img/hot-c.png",
+						text: '热门',
+						router: '/workbench',
+					},
+					{
+						ImgUrl: '/static/c-tabbar/img/file.png',
+						AcImgUrl: "/static/c-tabbar/img/file-c.png",
+						text: '文件',
+						router: '/addressbook',
+					},
+					{
+						ImgUrl: '/static/c-tabbar/img/my.png',
+						AcImgUrl: "/static/c-tabbar/img/my-c.png",
+						text: '我的',
+						router: '/my',
+					},
+				]
 			},
 			//主色调 ：未选中图片颜色
 			MainColor: {
 				type: String,
+				required: false,
 				default: "#288afc"
-			},	
+			},
 			//副色调 : 选中图片颜色 （建议白灰）
 			ViceColor: {
 				type: String,
+				required: false,
 				default: "#7f8c8d"
 			}
 		},
@@ -39,7 +72,7 @@
 		methods: {
 			changeCurrent(item, idx) {
 				this.currentItem = idx
-				// this.$router.push(item.router)
+				this.$router.push(item.router)
 				//选中点击事件
 				this.$emit("currentClick")
 			},

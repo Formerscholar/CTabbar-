@@ -9,7 +9,7 @@
 </template>
 
 <script>
-	import CTabbar from "../../components/c-tabbar/c-tabbar.vue"
+	import CTabbar from "../../components/Chad-CTabbar/Chad-CTabbar.vue"
 	export default {
 		components: {
 			CTabbar

@@ -1,7 +1,9 @@
 # 示例
 
-```vue
-import CTabbar from "../../components/c-tabbar/c-tabbar.vue"
+```javascript
+	uniapp 引用 import CTabbar from "../../components/Chad-CTabbar/Chad-CTabbar.vue"
+
+	vue npm安装引用 import CTabbar from 'chad-tabbar'
 	components: {
 			CTabbar
 	}
@@ -11,7 +13,7 @@ import CTabbar from "../../components/c-tabbar/c-tabbar.vue"
 		:ViceColor="'#7f8c8d'"
 		@currentClick="currentClick" />
 ```
-	-tabbarList = [{
+	-  tabbarList: [{
 						ImgUrl: '/static/c-tabbar/img/home.png',
 						AcImgUrl:"/static/c-tabbar/img/home-c.png",
 						text: '首页',
@@ -43,6 +45,11 @@ import CTabbar from "../../components/c-tabbar/c-tabbar.vue"
 					},
 				]
 			
+# tip
+ vue  引用 需要 安装 node-sass 和 sass-loader
+ ```
+  npm i -D node-sass sass-loader
+ ```
 
 # todo
  此版本仅支持5项tabbar
